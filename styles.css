@@ -1,0 +1,82 @@
+:root {
+  --bg: #0b0d12;
+  --bg-2: #13161d;
+  --ink: #f2f4f8;
+  --ink-dim: #b2b8c4;
+  --ink-mute: #79808c;
+  --line: #222631;
+  --accent: #e4b85e;
+  --radius: 10px;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --sans: -apple-system, BlinkMacSystemFont, "Inter", "Helvetica Neue", sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.6; }
+
+.top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 32px; border-bottom: 1px solid var(--line);
+  max-width: 1100px; margin: 0 auto;
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.mark { color: var(--accent); font-size: 22px; }
+.name { font-weight: 700; letter-spacing: 0.18em; font-size: 14px; }
+.top nav { display: flex; gap: 20px; font-size: 13px; }
+.top nav a { color: var(--ink-dim); text-decoration: none; letter-spacing: 0.04em; }
+.top nav a:hover { color: var(--ink); }
+
+main { max-width: 880px; margin: 0 auto; padding: 60px 32px 40px; }
+
+.hero h1 {
+  font-size: 36px; line-height: 1.2; font-weight: 700;
+  margin: 0 0 20px; letter-spacing: -0.01em;
+}
+.hero .lede { font-size: 17px; color: var(--ink-dim); max-width: 680px; }
+
+.cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+  margin: 56px 0 40px;
+}
+.cards .card {
+  background: var(--bg-2); border: 1px solid var(--line);
+  border-radius: var(--radius); padding: 22px 24px;
+}
+.cards h2 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin: 0 0 10px; font-weight: 600; }
+.cards p { font-size: 14px; color: var(--ink-dim); margin: 0; }
+
+.data { margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--line); }
+.data h2 { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-mute); font-weight: 600; margin-bottom: 12px; }
+.data p { color: var(--ink-dim); font-size: 15px; }
+.data a { color: var(--accent); text-decoration: none; }
+.data a:hover { text-decoration: underline; }
+
+.footer-info {
+  margin-top: 40px; padding: 20px 24px;
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: var(--radius);
+  font-size: 13px; color: var(--ink-dim); display: grid; gap: 6px;
+}
+.footer-info strong { color: var(--ink); font-weight: 600; }
+.footer-info a { color: var(--accent); text-decoration: none; }
+
+footer {
+  max-width: 1100px; margin: 0 auto; padding: 20px 32px;
+  display: flex; justify-content: space-between; align-items: center;
+  border-top: 1px solid var(--line); font-size: 12px; color: var(--ink-mute);
+}
+footer a { color: var(--ink-dim); text-decoration: none; margin: 0 4px; }
+footer a:hover { color: var(--ink); }
+
+.doc h1 { font-size: 30px; margin-bottom: 4px; }
+.doc .effective { color: var(--ink-mute); font-size: 13px; margin: 0 0 30px; font-family: var(--mono); }
+.doc h2 { font-size: 18px; margin-top: 32px; margin-bottom: 10px; color: var(--accent); }
+.doc p, .doc li { color: var(--ink-dim); font-size: 15px; }
+.doc ul { padding-left: 20px; }
+.doc li { margin: 6px 0; }
+.doc a { color: var(--accent); text-decoration: none; }
+.doc a:hover { text-decoration: underline; }
+.doc address { font-style: normal; color: var(--ink-dim); line-height: 1.7; }
+
+@media (max-width: 800px) {
+  .cards { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 28px; }
+}
